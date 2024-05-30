@@ -1,0 +1,57 @@
+{
+  "utilisateurs": [
+    {
+      "id": "1",
+      "nom_utilisateur": "lecteur_test",
+      "email": "test@example.com",
+      "mot_de_passe": "motdepasse123"
+    },
+    {
+      "id": "1c87",
+      "nom_utilisateur": "9ushdisds",
+      "email": "sdsadasd@gmail.com",
+      "mot_de_passe": "sdsdsds"
+    },
+    {
+      "id": "3ba0",
+      "nom_utilisateur": "fdfdf",
+      "email": "dfdfd@gmail.com",
+      "mot_de_passe": "2323232"
+    }
+  ],
+  "livres": [
+    {
+      "id": "1",
+      "titre": "Introduction à la programmation",
+      "auteur": "Jane Doe",
+      "prix": 29.99
+    },
+    {
+      "id": "2",
+      "titre": "Informatique avancée",
+      "auteur": "John Doe",
+      "prix": 49.99
+    }
+  ],
+  "commandes": [
+    {
+      "id": "1",
+      "id_utilisateur": 1,
+      "date_commande": "2023-06-01"
+    }
+  ],
+  "articles_commande": [
+    {
+      "id": "1",
+      "id_commande": 1,
+      "id_livre": 1,
+      "quantite": 1
+    },
+    {
+      "id": "2",
+      "id_commande": 1,
+      "id_livre": 2,
+      "quantite": 1
+    }
+  ]
+}
