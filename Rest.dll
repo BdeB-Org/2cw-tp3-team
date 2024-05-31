@@ -1,0 +1,57 @@
+BEGIN
+  ORDS.enable_schema(
+    p_enabled             => TRUE,
+    p_schema              => 'RESTSCOTT',
+    p_url_mapping_type    => 'BASE_PATH',
+    p_url_mapping_pattern => 'hr2',
+    p_auto_rest_auth      => FALSE
+  );
+
+  COMMIT;
+END;
+/
+
+BEGIN
+  ORDS.enable_object (
+    p_enabled      => TRUE, 
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'UTILISATEURS',
+    p_object_type  => 'TABLE',
+    p_object_alias => 'users'
+  );
+
+  ORDS.enable_object (
+    p_enabled      => TRUE, 
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'LIVRE',
+    p_object_type  => 'TABLE',
+    p_object_alias => 'books'
+  );
+
+  ORDS.enable_object (
+    p_enabled      => TRUE, 
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'COMMANDE',
+    p_object_type  => 'TABLE',
+    p_object_alias => 'orders'
+  );
+
+  ORDS.enable_object (
+    p_enabled      => TRUE, 
+    p_schema       => 'RESTSCOTT',
+    p_object       => 'ARTICLE_COMMANDE',
+    p_object_type  => 'TABLE',
+    p_object_alias => 'order_items'
+  );
+
+  COMMIT;
+END;
+/
+
+-- Confirmation de l'activation du schéma
+SELECT *
+FROM user_ords_schemas;
+
+-- Confirmation de l'activation des tables pour REST
+SELECT *
+FROM user_ords_enabled_objects;
