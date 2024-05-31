@@ -1,0 +1,17 @@
+-- Insertion des données dans la table utilisateurs
+INSERT INTO utilisateurs (id, nom_utilisateur, email, mot_de_passe) VALUES (1, 'jdoe', 'jdoe@example.com', 'password123');
+INSERT INTO utilisateurs (id, nom_utilisateur, email, mot_de_passe) VALUES (2, 'asmith', 'asmith@example.com', 'password456');
+
+-- Insertion des données dans la table livre
+INSERT INTO livre (id, titre, auteur, prix) VALUES (1, 'Le Petit Prince', 'Antoine de Saint-Exupéry', 25.50);
+INSERT INTO livre (id, titre, auteur, prix) VALUES (2, '1984', 'George Orwell', 19.84);
+
+-- Insertion des données dans la table commande
+INSERT INTO commande (id, date_commande, utilisateurs_id) VALUES (1, TO_DATE('2024-05-20', 'YYYY-MM-DD'), 1);
+INSERT INTO commande (id, date_commande, utilisateurs_id) VALUES (2, TO_DATE('2024-05-21', 'YYYY-MM-DD'), 2);
+
+-- Insertion des données dans la table article_commande
+INSERT INTO article_commande (id, quantite, commande_id, livre_id) VALUES (1, 2, 1, 1);
+INSERT INTO article_commande (id, quantite, commande_id, livre_id) VALUES (2, 1, 2, 2);
+
+COMMIT;
